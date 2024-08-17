@@ -8,10 +8,15 @@ then
     exit 1 # it will exit if the user is not su
 else
     echo "you need to change it to su user name"
-    sudo su 
-    exit
+    # sudo su 
+    # exit
 fi
 
 dnf install mysql -y
-
-echo "is script is pending"
+if [ $? -ne 0 ]
+then 
+    echo "installation script is failure"
+    exit 1
+else 
+    echo "installation is success"
+fi
