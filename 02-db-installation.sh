@@ -7,7 +7,7 @@ then
     echo " you are in super user"
 else
     echo "you need to change it to su user name"
-    sudo su -s 
+    sudo su -s "$0"
     exit
 fi
 
