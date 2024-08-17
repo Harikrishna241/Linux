@@ -1,8 +1,8 @@
 #! /bin/bash 
 
-USERID = $id 
+USERID = $uid 
 
-if [ "$USERID" -eq 0 ];
+if [ "$USERID" -eq 0 ]
 then 
     echo " you are in super user"
     exit 1 # it will exit if the user is not su
@@ -13,7 +13,7 @@ else
 fi
 
 dnf install mysql -y
-if [ $? -ne 0 ];
+if [ $? -ne 0 ]
 then 
     echo "installation script is failure"
     exit 1
