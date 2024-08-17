@@ -5,6 +5,14 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 Script_Name=$(echo $0 | cut -d "." -f1)
 log_name=/tmp/$Script_Name-$TIMESTAMP.log
 
+#Color coding for the shell scripting output 
+RED="\e[31m"
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
+# # example how to use the colors 
+# echo -e "${RED}This is some red text, ${ENDCOLOR}"
+# echo -e "${GREEN}And this is some green text${ENDCOLOR}"
+
 validate(){
     if [ "$1" -eq 0 ]
     then 
