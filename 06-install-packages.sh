@@ -13,3 +13,8 @@ else
 fi
 
 echo "install packages $@"
+for i in $@;
+do 
+    dnf install $i -y 
+done
+
