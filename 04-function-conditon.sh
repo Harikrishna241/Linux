@@ -8,6 +8,7 @@ validate(){
         echo "the status of $2 installation is sucess"
     else
         echo " the status of $2 installation is failure "
+        exit 1
     fi
 }
 
@@ -22,7 +23,7 @@ else
 fi
 
 dnf install mysql -y
-validate $? " mysql"
+validate $? " mysql "
 
 # if [ $? -ne 0 ]
 # then 
