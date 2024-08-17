@@ -1,8 +1,8 @@
 #! /bin/bash 
 
-USERID = "$(id -u)" 
+USERID = $(id -u) 
 
-if [ "$USERID" -eq 0 ];
+if [ "$USERID" -eq 0 ]
 then 
     echo " you are in super user"
     exit 1 # it will exit if the user is not su
