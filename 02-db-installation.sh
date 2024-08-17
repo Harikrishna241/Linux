@@ -8,4 +8,5 @@ then
 else
     echo "you need to change it to su user name"
     su -
+    echo $id
 fi
