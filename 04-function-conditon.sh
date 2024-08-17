@@ -26,7 +26,7 @@ else
 fi
 
 dnf install mysql -y &>>$log_name
-#validate $? " mysql " &>> log_name
+validate $? " mysql "
 
 # if [ $? -ne 0 ]
 # then 
