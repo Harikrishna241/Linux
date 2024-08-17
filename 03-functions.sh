@@ -2,6 +2,11 @@
 
 USERID=$(id -u) 
 
+validate(){
+    echo "the status of the script:$1"
+    echo "installation of sript $2"
+}
+
 if [ "$USERID" -eq 0 ]
 then 
     echo " you are in super user"
@@ -12,12 +17,6 @@ else
     # sudo su 
     # exit
 fi
-validate(){
-    echo "the status of the script:$1"
-    echo "installation of sript $2"
-
-}
-
 
 dnf install mysql -y
 validate $? "installation of mysql"
