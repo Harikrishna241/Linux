@@ -4,7 +4,7 @@
 USERID=$(id -u)
 
 
-if [ $USERID -eq 0 ]
+if [ "$USERID" -eq 0 ]
 then 
     echo "you are in super user mode and you can run the script"
 else 
@@ -13,10 +13,10 @@ else
 fi
 # now i need to check whther the mysql-server install or not 
 yum list installed mysql-server
-if [ $? -eq 0]
+if [ "$?" -eq 0]
 then 
     echo "mysql-server package installed"
-    exit 1
+    
 else
     echo "installing the mysql-server"
     dnf install mysql-server -y
@@ -27,7 +27,7 @@ fi
 STATUS="$(systemctl is-active mysqld.service)"
 if [ "${STATUS}" = "active" ]; then
     echo "mysqld your tasks ....."
-    exit 1
+    
 else 
     echo " Service not running.... so activating"  
     systemctl enable mysqld
