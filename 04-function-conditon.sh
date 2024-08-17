@@ -2,7 +2,7 @@
 
 USERID=$(id -u) 
 TIMESTAMP = $(date +%F-%H-%M-%S)
-Script_Name=($0 | cut -f " . " -f1)
+Script_Name=($0 | cut -d " . " -f1)
 log_name = /tmp/$Script_Name-$TIMESTAMP.log
 
 validate(){
