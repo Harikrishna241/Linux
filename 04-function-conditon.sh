@@ -1,9 +1,9 @@
 #! /bin/bash 
 
 USERID=$(id -u) 
-TIMESTAMP = $(date +%F-%H-%M-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 Script_Name=$($0 | cut -d " . " -f1)
-log_name = /tmp/$Script_Name-$TIMESTAMP.log
+log_name=/tmp/$Script_Name-$TIMESTAMP.log
 
 validate(){
     if [ "$1" -eq 0 ]
