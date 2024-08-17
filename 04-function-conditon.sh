@@ -3,7 +3,7 @@
 USERID=$(id -u) 
 
 validate(){
-    if [ $1 =eq 0 ]
+    if [ "$1" =eq 0 ]
     then 
         echo "the status of $2 installation is sucess"
     else
