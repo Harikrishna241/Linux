@@ -3,7 +3,7 @@
 USERID=$(id -u) 
 TIMESTAMP = $(date +%F-%H-%M-%S)
 Script_Name=($0 | cut -f " . " -f1)
-log_name = /tmp/$Script_Name
+log_name = /tmp/$Script_Name-$TIMESTAMP.log
 
 validate(){
     if [ "$1" -eq 0 ]
@@ -25,8 +25,8 @@ else
 
 fi
 
-dnf install mysql -y
-validate $? " mysql " &>> log_name
+dnf install mysql -y &>> $log_name
+#validate $? " mysql " &>> log_name
 
 # if [ $? -ne 0 ]
 # then 
