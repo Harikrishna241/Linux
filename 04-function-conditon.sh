@@ -7,9 +7,9 @@ validate(){
     then 
         echo "the status of $2 installation is sucess"
     else
-
         echo " the status of $2 installation is failure "
-    }
+    fi
+}
 
 if [ "$USERID" -eq 0 ]
 then 
