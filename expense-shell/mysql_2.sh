@@ -20,6 +20,7 @@ else
 fi
 # now i need to check whther the mysql-server install or not 
 validate(){
+    echo "print he value $?"
     if [ "$?" -eq 0]
         then 
             echo -e "$2 $G successfully $No "
