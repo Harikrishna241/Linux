@@ -22,12 +22,12 @@ fi
 validate(){
     echo "print he value $?"
     if [ $? -eq 0]
-        then 
-            echo -e "$2 $G successfully $No "
+    then 
+        echo -e "$2 $G successfully $No "
             
-        else
+    else
             echo -e "$2 $R failed $NO"            
-        fi
+    fi
 
 }
 
