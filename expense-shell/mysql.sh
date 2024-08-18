@@ -36,4 +36,11 @@ fi
 
 #Setting up the root password for the mysql server 
 
-mysql_secure_installation --set-root-pass ExpenseApp@1
+mysql_secure_installation --<ipaddress of DB server > ExpenseApp@1 -e 'show databases'
+if [ "$?" -ne 0]
+then 
+    mysql_secure_installation --set-root-pass ExpenseApp@1
+    
+else
+    echo "mysql root passwd is already set skipping"
+fi
