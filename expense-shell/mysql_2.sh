@@ -42,11 +42,11 @@ validate $? "my sql-server started"
 
 #Setting up the root password for the mysql server 
 
-mysql_secure_installation --<ipaddress of DB server > ExpenseApp@1 -e 'show databases'
-if [ "$?" -ne 0]
-then 
-    mysql_secure_installation --set-root-pass ExpenseApp@1
+# mysql_secure_installation --<ipaddress of DB server > ExpenseApp@1 -e 'show databases'
+# if [ "$?" -ne 0]
+# then 
+#     mysql_secure_installation --set-root-pass ExpenseApp@1
     
-else
-    echo -e "mysql root passwd is already set $R skipping $NO"
-fi
+# else
+#     echo -e "mysql root passwd is already set $R skipping $NO"
+# fi
