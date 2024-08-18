@@ -25,7 +25,7 @@ validate(){
             echo -e "$2 $G successfully $No "
             
         else
-            echo "$2 $R failed "            
+            echo -e "$2 $R failed $NO"            
         fi
 
 }
